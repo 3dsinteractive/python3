@@ -11,7 +11,7 @@ import (
 	"fmt"
 	"os"
 
-	python3 "github.com/go-python/cpy3"
+	python3 "github.com/3dsinteractive/python3"
 )
 
 func main() {
