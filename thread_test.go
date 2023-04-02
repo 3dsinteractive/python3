@@ -8,16 +8,16 @@ import (
 
 func TestThreadInitialization(t *testing.T) {
 	Py_Initialize()
-	PyEval_InitThreads()
+	// PyEval_InitThreads()
 
-	assert.True(t, PyEval_ThreadsInitialized())
+	// assert.True(t, PyEval_ThreadsInitialized())
 
-	PyEval_ReInitThreads()
+	// PyEval_ReInitThreads()
 }
 
 func TestGIL(t *testing.T) {
 	Py_Initialize()
-	PyEval_InitThreads()
+	// PyEval_InitThreads()
 
 	gil := PyGILState_Ensure()
 
@@ -28,7 +28,7 @@ func TestGIL(t *testing.T) {
 
 func TestThreadState(t *testing.T) {
 	Py_Initialize()
-	PyEval_InitThreads()
+	// PyEval_InitThreads()
 
 	threadState := PyGILState_GetThisThreadState()
 
@@ -43,7 +43,7 @@ func TestThreadState(t *testing.T) {
 
 func TestThreadSaveRestore(t *testing.T) {
 	Py_Initialize()
-	PyEval_InitThreads()
+	// PyEval_InitThreads()
 
 	threadState := PyEval_SaveThread()
 

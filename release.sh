@@ -9,5 +9,5 @@ fi
 
 git fetch
 git push
-git tag -a $new -m "Release $new"
-git push origin $new
+git tag -a v$new -m "Release v$new"
+git push origin v$new
